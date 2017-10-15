@@ -1,0 +1,71 @@
+@import '_vars';
+
+body{
+	background: $darkGrey;
+	color: $white;
+	font-family: $fontFamily;
+}
+
+$inverseOfEggplant: invert(red);
+
+header{
+	nav{
+		border: 3px green solid;
+
+		li{
+			color: $inverseOfEggplant;
+
+			a{
+				font-size: 30px;
+				color: $white;
+
+				&:hover{
+					font-weight: bold;
+				}
+
+				&:active{
+					font-style: italic;
+				}
+			}
+		}
+	}
+
+	h2{
+		color: $eggplant;
+	}
+}
+
+#main-section{
+	width: $basicWidth + 100px;
+
+	p{
+		color: $eggplant;
+	}
+
+	div{
+		%basicParagraph{
+			font-size: 12px;
+			color: pink;
+		}
+
+		.specialParagraph{
+			@extend %basicParagraph;
+			font-style: italic;
+		}
+	}
+}
+
+footer{
+	background: url("#{$imgDir}hat.jpg");
+	width: 500px;
+	height: 500px;
+}
+
+
+
+
+
+
+
+
+

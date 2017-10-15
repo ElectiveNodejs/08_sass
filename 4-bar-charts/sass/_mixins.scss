@@ -1,0 +1,13 @@
+@mixin barChart($size){
+	width: $size;
+	height: $size;
+	border: 1px black solid;
+	display: flex;
+	align-items: flex-end;	
+}
+
+@mixin bar($height, $color, $width: 40px){
+	width: $width;
+	height: $height;
+	background: $color;
+}

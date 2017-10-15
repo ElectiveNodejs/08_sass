@@ -1,0 +1,35 @@
+body {
+  background: #222222;
+  color: #ffffff;
+  font-family: Verdana; }
+
+header nav {
+  border: 3px green solid; }
+  header nav li {
+    color: cyan; }
+    header nav li a {
+      font-size: 30px;
+      color: #ffffff; }
+      header nav li a:hover {
+        font-weight: bold; }
+      header nav li a:active {
+        font-style: italic; }
+header h2 {
+  color: yellow; }
+
+#main-section {
+  width: 500px; }
+  #main-section p {
+    color: yellow; }
+  #main-section div .specialParagraph {
+    font-size: 12px;
+    color: pink; }
+  #main-section div .specialParagraph {
+    font-style: italic; }
+
+footer {
+  background: url("img/hat.jpg");
+  width: 500px;
+  height: 500px; }
+
+/*# sourceMappingURL=style.css.map */

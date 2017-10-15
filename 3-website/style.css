@@ -1,0 +1,594 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Dosis', arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.clear-float {clear: both;}
+a {text-decoration: none;}
+
+.anchor {
+    display: block;
+    height: 39px;
+    margin-top: -39px;
+    visibility: hidden;
+}
+
+[class*='col-']{
+    width: 100%;
+    float: left;
+    padding: 16px;
+}
+
+@media screen and (min-width: 540px) {
+    .col-tab-1 {width: 8.33%;}
+    .col-tab-2 {width: 16.66%;}
+    .col-tab-3 {width: 25%;}
+    .col-tab-4 {width: 33.33%;}
+    .col-tab-5 {width: 41.66%;}
+    .col-tab-6 {width: 50%;}
+    .col-tab-7 {width: 58.33%;}
+    .col-tab-8 {width: 66.66%;}
+    .col-tab-9 {width: 75%;}
+    .col-tab-10 {width: 83.33%;}
+    .col-tab-11 {width: 91.66%;}
+    .col-tab-12 {width: 100%;}
+}
+
+@media screen and (min-width: 650px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+.row {
+    /*overflow: auto;*/
+}
+
+.row::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/* ----- MAIN MENU ----- */
+
+#main-nav {
+    background: black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+#main-nav a, #main-nav span {
+    display: block;
+    padding: 0 25px;
+    height: 40px;
+    line-height: 40px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #fff;
+    cursor: pointer;
+}
+
+#main-nav ul li:hover, #main-nav a:hover, #main-nav span:hover {
+    background: rgb(180,180,180);
+}
+
+#main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-nav ul li {
+    display: inline-block;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* - mobile nav - */
+
+ul#mobile-nav {position: relative;}
+
+li#li-menu-bars {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+li#li-menu-bars span {
+    display: block;
+    padding: 0 25px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+#mobile-nav-dropdown {
+    height: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    overflow: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#mobile-nav-dropdown li {
+    width: 100%;
+}
+
+#desctop-nav {
+    display: none;
+}
+
+/* - desctop - nav */
+
+@media screen and (min-width: 540px){
+    #mobile-nav{display: none;}
+    #desctop-nav {display: block;}
+}
+
+li#desctop-drpdown-btn {
+    position: relative;
+}
+
+#desctop-nav-dropdown {
+    display: none;
+    position: absolute;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    z-index: 1;
+    background: #f7f7f7;
+}
+
+#desctop-nav-dropdown a {
+    color: black;
+    width: 200px;    
+}
+
+#desctop-drpdown-btn:hover #desctop-nav-dropdown {
+    display: block; 
+}
+
+/* ----- TITLE IMAGE ----- */
+
+#title-img {
+    width: 100%;
+    background: gray url('http://viblaze.co.uk/MyFolder/MyWorks/BandSite/ny.jpg') no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
+
+#title-text {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0,0,0,0.8);
+    
+}
+
+#title-text h2{
+    font-weight: normal;
+    margin: 0;
+}
+
+/* ----- THE BAND ----- */
+
+#band-text {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#band-text p:nth-of-type(1){font-size: 0.9em;}
+#band-text p:nth-of-type(2){text-align: justify;}
+
+#band-members {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 90px;
+}
+
+#band-members .row {padding: 0;}
+
+.band-members-single img{
+    max-width: 150px;
+    height: auto;
+}
+
+@media screen and (max-width: 540px){
+    .band-members-single img {
+        max-width: 255px;
+    }
+}
+
+/* ----- TOUR DATES ----- */
+
+#tours {
+    background: black;
+    color: #fff;
+    padding: 40px 0 90px 0;
+}
+
+.tours-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.tours-content > h2 {text-align: center;}
+.tours-content > p {
+    text-align: center;
+    color: gray;
+    font-size: 0.9em;
+}
+
+#tours-top-table {
+    margin-top: 40px;
+}
+
+#tours-top-table > div{
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    background: #fff;
+    color: rgb(100,100,100);
+    padding: 10px 15px;
+    position: relative;
+}
+
+#tours-top-table span {
+    position: absolute;
+    right: 20px;
+    top: 7px;
+    background: black;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 12px;
+    color: #fff;
+    line-height: 25px;
+}
+
+#tours-row1 span{display: none;}
+#tours-row2 span{display: none;}
+#tours-row3 span{display: inline-block;}
+
+#tours-top-table p {
+    margin: 0;
+    padding: 0;
+}
+
+#tours-top-table p::after {
+    content: 'Sold out';
+    margin-left: 25px;
+    background: #ff2714;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+#tours-row1 p::after{display: inline-block;}
+#tours-row2 p::after{display: inline-block;}
+#tours-row3 p::after{display: none;}
+
+.tours-bottom {
+    max-width: 732px;
+    margin: auto;
+    padding: 0 8px;
+}
+
+.tours-city {
+    padding: 0 8px;
+    margin: 15px 0;
+}
+
+.tours-city img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tours-city img:hover {
+    opacity: 0.7;
+}
+
+.tours-city-text {
+    padding: 15px;
+    background: #fff;
+    color: black;
+}
+
+.tours-city-text p:first-child {
+    margin: 0;
+}
+
+.tours-city-text p:nth-child(2) {
+    color: gray;
+}
+
+.tours-city-text button {
+    border: none;
+    background: black;
+    color: #fff;
+    padding: 12px 15px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+    outline: none;
+}
+
+.tours-city-text button:hover {
+    background: #cc2200;;   
+}
+
+/* ----- MODAL ----- */
+
+.modal-tickets {
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background: rgba(0,0,0,0.5);
+    overflow: auto;
+}
+
+@keyframes modal-tickets {
+    from {top:-40%; opacity:0;}
+    to {top:15%; opacity:1;}
+}
+
+@keyframes modal-tickets-back {
+    from {top:15%; opacity:1;}
+    to {top:-40%; opacity:0;}
+}
+
+@keyframes modal-tickets-bgd {
+    from {background: rgba(0,0,0,0.5);}
+    to {background: rgba(0,0,0,0);}
+}
+
+.modal-t-bg {
+    animation: modal-tickets-bgd 0.6s;
+}
+
+.modal-t-forward {
+    animation: modal-tickets 0.6s;
+}
+
+.modal-t-back {
+    animation: modal-tickets-back 0.6s;
+}
+
+.modal-t-content {
+    position: relative;
+    margin: 0 16px;
+    width: auto;
+    background: #fff;
+    top: 15%;
+}
+
+@media screen and (min-width: 540px){
+    .modal-t-content {max-width: 500px; margin:auto;} 
+}
+
+@media screen and (min-width: 750px){
+    .modal-t-content {max-width: 700px; margin:auto;} 
+}
+
+@media screen and (min-width: 850px){
+    .modal-t-content {max-width: 800px; margin:auto;} 
+}
+
+.modal-t-title {
+    width: 100%;
+    background: #ffaa00; 
+    padding: 40px 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.modal-t-title h1 {
+    margin: 0;
+}
+
+.modal-t-title span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    line-height: 34px;
+    vertical-align: middle;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.modal-t-text {padding: 15px;}
+
+.modal-t-title span:hover{
+    background: #e69900;
+}
+
+#modal-t-form span {
+    display: block;
+    margin-bottom: 15px;
+}
+
+#modal-t-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+#modal-t-form input[type='submit']{
+    padding: 15px;
+    border: none;
+    background: #ffaa00;
+    font-size: 1.1em;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#modal-t-form input[type='submit']:hover {
+    background: #e69900;
+}
+
+#modal-t-form input[type='submit']:active {
+    background: #cc8800;
+}
+
+.modal-t-help{overflow: auto;}
+.modal-t-help span {
+    float: right;
+}
+
+.modal-t-help a {
+    text-decoration: underline;
+    color: blue;
+}
+
+/* ----- CONTACTS ----- */
+
+.contacts-container {
+    padding:40px 0 90px 0;
+    text-align: center;
+}
+
+.contacts-container p {
+    text-align: center;
+    font-size: 0.9em;
+    color: gray;
+}
+
+.contacts-row {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contacts-form-wrap {
+    padding: 16px 8px;
+}
+
+.contacts ul {
+    display: block;
+    text-align: left;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.contacts li {
+    margin-top: 15px;
+}
+
+.contacts li i {
+    width: 25px;
+}
+
+.contacts-form-wrap form {
+    display: inline-block;
+    margin: 0;
+}
+
+.contacts-form-wrap input {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid lightgray;
+}
+
+.contacts-form-wrap .col-6 {
+    padding: 0 8px;
+}
+
+.contacts-form-bottom {
+    padding: 0 8px;
+}
+
+.contacts-form-bottom input[type='submit'] {
+    width: 70px;
+    float: right;
+    cursor: pointer;
+    background: black;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.contacts-form-bottom input[type='submit']:hover {
+    background: #cc2200;
+}
+
+/* ----- GOOGLE MAP ----- */
+
+#map {
+    width: 100%;
+    height: 400px;
+    background: gray;
+}
+
+/* ----- FOOTER ----- */
+
+.footer {
+    padding: 40px 0 60px 0;
+    text-align: center;
+    color: gray;
+}
+
+.footer p {margin: 3px 0;}
+
+.social {
+    font-size: 1.5em;
+    margin-bottom: 18px;
+}
+
+.social i {
+    margin: 0 1px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.social i:hover {
+    color: black;
+}
+
+.footer p a {
+    color: gray;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color: darkgray;
+}
+
+.footer p a:hover {
+    color: black;
+}

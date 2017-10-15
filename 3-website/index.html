@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnVh4j-C8Wl-IaCKnJihxetNWF_7uamcU&callback=myMap" type="text/javascript" defer></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset = 'UTF-8' />
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Band site</title>
+</head>
+    
+<body>
+    
+    <!-- MAIN NAV -->
+    
+    <div id='main-nav'>
+        <ul id='mobile-nav'>
+            <li><a href='#'>HOME</a></li>
+            <li id='li-menu-bars'><span id='mobile-drpdown-btn'><i class="fa fa-bars" aria-hidden="true"></i></span></li>
+            <div id='mobile-nav-dropdown'>
+                <li class='nav-hidden-li'><a href='#band'>BAND</a></li>     
+                <li class='nav-hidden-li'><a href='#tour'>TOUR</a></li>     
+                <li class='nav-hidden-li'><a href='#contact'>CONTACT</a></li>            
+                <li class='nav-hidden-li'><a href='#'>MERCH</a></li>
+            </div>    
+        </ul>
+        <ul id='desctop-nav'>
+            <li><a href='#'>HOME</a></li>
+            <li><a href='#band'>BAND</a></li>
+            <li><a href='#tour'>TOUR</a></li>
+            <li><a href='#contact'>CONTACT</a></li>
+            <li id='desctop-drpdown-btn'><span>MORE&#x25BE</span>
+                <div id='desctop-nav-dropdown'>
+                    <a href='#'>Merchandise</a>
+                    <a href='#'>Extras</a>
+                    <a href='#'>Media</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- TITLE -->
+    
+    <div id='container'>
+        <div id='title-img'>
+            <div id='title-text'>
+                <h2>New York</h2>
+                <p>The atmosphere in New York is amazing.</p>
+            </div>
+        </div>
+        
+        <!-- BAND MEMBERS -->
+        
+        <span class='anchor' id='band'></span>
+        <div>
+            <div class='row'>
+                <div class='col-12'>
+                    <div id='band-text'>
+                    <h2>THE BAND</h2>
+                    <p><i>We love music</i></p>
+                    <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='band-members'>
+            <div class='row'>
+                <div class='col-4 col-tab-4 band-members-single'>
+                    <p>Name</p>
+                    <img src='http://viblaze.co.uk/MyFolder/MyWorks/BandSite/bandmember.jpg' alt='Band member' width='255px' height='255px' />
+                </div>
+                <div class='col-4 col-tab-4 band-members-single'>
+                    <p>Name</p>
+                    <img src='http://viblaze.co.uk/MyFolder/MyWorks/BandSite/bandmember.jpg' alt='Band member' width='255px' height='255px' />
+                </div>
+                <div class='col-4 col-tab-4 band-members-single'>
+                    <p>Name</p>
+                    <img src='http://viblaze.co.uk/MyFolder/MyWorks/BandSite/bandmember.jpg' alt='Band member' width='255px' height='255px' />
+                </div>
+            </div>            
+        </div>
+        
+        <!-- TOURS -->
+        
+        <span class='anchor' id='tour'></span>
+        <div id='tours'>
+            <div class='row tours-top'>
+                <div class='col-12'>
+                    <div class='tours-content'>
+                        <h2>TOUR DATES</h2>
+                        <p><i>Remember to book your ticket!</i></p>
+                        <div id='tours-top-table'>
+                            <div id='tours-row1'><p>September</p><span></span></div>
+                            <div id='tours-row2'><p>October</p><span></span></div>
+                            <div id='tours-row3'><p>November</p><span>3</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=' tours-bottom'>
+            <div class='row'>
+                <div class='col-4 col-tab-4 tours-city'>
+                    <img src='http://viblaze.co.uk/MyFolder/MyWorks/BandSite/newyork.jpg' alt='New York' width='400px' height='300px'/>
+                    <div class='tours-city-text'>
+                        <p><b>New York</b></p>
+                        <p>Fri 27 Nov 2017</p>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button onclick='openTicketModal()'  type='button'>Buy Tickets</button>
+                    </div>
+                </div>
+                <div class='col-4 col-tab-4 tours-city'>
+                    <img src='http://viblaze.co.uk/MyFolder/MyWorks/BandSite/paris.jpg' alt='Paris' width='400px' height='300px'/>
+                    <div class='tours-city-text'>
+                        <p><b>Paris</b></p>
+                        <p>Sat 29 Nov 2017</p>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button onclick='openTicketModal()'  type='button'>Buy Tickets</button>
+                    </div>
+                </div>
+                <div class='col-4 col-tab-4 tours-city'>                        
+                    <img src='http://viblaze.co.uk/MyFolder/MyWorks/BandSite/sanfran.jpg' alt='San Francisco' width='400px' height='300px'/>
+                    <div class='tours-city-text'>
+                        <p><b>San Francisco</b></p>
+                        <p>Sun 29 Nov 2017</p>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <button onclick='openTicketModal()' type='button'>Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+            </div>             
+        </div>
+        
+        <!-- MODAL TICKETS -->
+        
+        <div class='modal-tickets' id='modal-t'>
+            <div class='modal-t-content' id='modal-tc'>
+                <div class='modal-t-title'>
+                    <h1><i class="fa fa-shopping-bag" aria-hidden="true"></i> Tickets</h1>
+                    <span onclick='closeTicketModal()'>x</span>
+                </div>
+                <div class='modal-t-text'>
+                    <form id='modal-t-form'>
+                        <span><i class="fa fa-cart-plus" aria-hidden="true"></i> Tickets, $15 per person</span>
+                        <input type='number' name='tickets-amount' placeholder='How many?' />
+                        <span><i class="fa fa-child" aria-hidden="true"></i>
+ Send To</span>
+                        <input type='email' name='tickets-email' placeholder='Enter email' />
+                        <input type='submit' name='tickets-pay-btn' value='PAY' />
+                    </form>
+                    <div class='modal-t-help'>
+                        <span>Need <a href='#'>help?</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CONTACTS --> 
+        
+        <span class='anchor' id='contact'></span>
+        <div class='contacts-container'>
+            <h2>CONTACT</h2>
+            <p><i>Fan? Drop a note!</i></p>
+            <div class='row contacts-row'>
+                <div class='col-6 col-tab-6 contacts'>
+                    <ul>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Leeds, UK</li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i> Phone: +447123456789</li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i> Email: info@band.com</li>
+                    </ul>
+                </div>
+                <div class='col-6 col-tab-6 contacts-form-wrap'>
+                    <form>
+                        <div class='row'>
+                            <div class='col-6'>
+                                <input type='text' name='name' placeholder='Name' />
+                            </div>
+                            <div class='col-6'>
+                                <input type='email' name='email' placeholder='Email' />
+                            </div>
+                        </div>
+                        <div class='contacts-form-bottom'>
+                            <input type='text' name='message' placeholder='Message' />
+                            <input type='submit' name='submit' value='SEND' />
+                        </div>
+                        <div class='clear-float'></div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- GOOGLE MAP -->
+        <div id='map'></div>
+        
+        <!-- FOOTER -->
+        
+        <div class=' row footer'>
+            <div class='col-12'>
+                <div class='social'>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-snapchat-square" aria-hidden="true"></i>
+                </div>
+                <p>Developed by <a href='http://viblaze.co.uk' target='_blank'> Viblaze</a>.</p>
+                <p>Design tamplate from <a href='https://www.w3schools.com' target='_blank'>www.w3schools.com</a></p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+@import '_vars';
+@import '_mixins';
+@import '_funcs';
+
+.container{
+	display: flex;
+
+	#barChart1{
+
+		@include barChart(300px);
+
+
+		#america{
+			@include bar($americaVals...);
+		}
+
+		#europe{
+			@include bar($europeVals...);
+		}
+
+		#asia{
+			@include bar($asiaVals...);
+		}
+	}
+
+	#barChart2{
+		// @extend #barChart1;
+		
+		@include barChart($barChart2Size);
+
+		@if $barChart2Size > 300px{
+			border-color: red;
+		} @else if $barChart2Size < 300px{
+			border-color: blue;
+		} @else {
+			border-color: green;
+		}
+
+		#fr{
+			@include bar(150px, $fr, barWidth(4, $barChart2Size));
+		}
+
+		#de{
+			@include bar(50px, $de, barWidth(4, $barChart2Size));
+		}
+
+		#uk{
+			@include bar(300px, $uk, barWidth(4, $barChart2Size));
+		}
+
+		#dk{
+			@include bar(250px, $dk, barWidth(4, $barChart2Size));
+		}
+	}
+}
+
+
+
+
